@@ -1,0 +1,71 @@
+2017-02-21 07:57:00.456 INFO  (main) [   ] o.e.j.s.Server jetty-9.3.14.v20161028
+2017-02-21 07:57:01.075 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 6.4.1
+2017-02-21 07:57:01.075 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
+2017-02-21 07:57:01.075 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /mnt/d/4043/cz4043_ir_solr
+2017-02-21 07:57:01.091 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2017-02-21T07:57:01.075Z
+2017-02-21 07:57:01.091 INFO  (main) [   ] o.a.s.s.StartupLoggingUtils Property solr.log.muteconsole given. Muting ConsoleAppender named CONSOLE
+2017-02-21 07:57:01.110 INFO  (main) [   ] o.a.s.c.SolrResourceLoader Using system property solr.solr.home: /mnt/d/4043/cz4043_ir_solr/server/solr
+2017-02-21 07:57:01.110 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from /mnt/d/4043/cz4043_ir_solr/server/solr/solr.xml
+2017-02-21 07:57:01.393 INFO  (main) [   ] o.a.s.u.UpdateShardHandler Creating UpdateShardHandler HTTP client with params: socketTimeout=600000&connTimeout=60000&retry=true
+2017-02-21 07:57:06.765 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 1 core definitions underneath /mnt/d/4043/cz4043_ir_solr/server/solr
+2017-02-21 07:57:06.780 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Cores are: [travelsearch]
+2017-02-21 07:57:06.862 INFO  (coreLoadExecutor-6-thread-1) [   x:travelsearch] o.a.s.c.SolrResourceLoader [travelsearch] Added 51 libs to classloader, from paths: [/mnt/d/4043/cz4043_ir_solr/contrib/clustering/lib, /mnt/d/4043/cz4043_ir_solr/contrib/extraction/lib, /mnt/d/4043/cz4043_ir_solr/contrib/langid/lib, /mnt/d/4043/cz4043_ir_solr/contrib/velocity/lib, /mnt/d/4043/cz4043_ir_solr/dist]
+2017-02-21 07:57:06.878 INFO  (main) [   ] o.e.j.s.Server Started @7546ms
+2017-02-21 07:57:08.444 INFO  (coreLoadExecutor-6-thread-1) [   x:travelsearch] o.a.s.c.SolrConfig Using Lucene MatchVersion: 6.4.1
+2017-02-21 07:57:08.578 INFO  (coreLoadExecutor-6-thread-1) [   x:travelsearch] o.a.s.s.IndexSchema [travelsearch] Schema name=example-data-driven-schema
+2017-02-21 07:57:08.712 WARN  (coreLoadExecutor-6-thread-1) [   x:travelsearch] o.a.s.c.SolrResourceLoader Solr loaded a deprecated plugin/analysis class [solr.SynonymFilterFactory]. Please consult documentation how to replace it accordingly.
+2017-02-21 07:57:09.146 INFO  (coreLoadExecutor-6-thread-1) [   x:travelsearch] o.a.s.s.IndexSchema Loaded schema example-data-driven-schema/1.6 with uniqueid field id
+2017-02-21 07:57:09.216 INFO  (coreLoadExecutor-6-thread-1) [   x:travelsearch] o.a.s.c.CoreContainer Creating SolrCore 'travelsearch' using configuration from instancedir /mnt/d/4043/cz4043_ir_solr/server/solr/travelsearch
+2017-02-21 07:57:09.264 INFO  (coreLoadExecutor-6-thread-1) [   x:travelsearch] o.a.s.c.SolrCore [[travelsearch] ] Opening new SolrCore at [/mnt/d/4043/cz4043_ir_solr/server/solr/travelsearch], dataDir=[/mnt/d/4043/cz4043_ir_solr/server/solr/travelsearch/data/]
+2017-02-21 07:57:09.266 INFO  (coreLoadExecutor-6-thread-1) [   x:travelsearch] o.a.s.c.JmxMonitoredMap JMX monitoring is enabled. Adding Solr mbeans to JMX Server: com.sun.jmx.mbeanserver.JmxMBeanServer@5fa07e12
+2017-02-21 07:57:09.300 INFO  (ShutdownMonitor) [   ] o.a.s.c.CoreContainer Shutting down CoreContainer instance=2025221430
+2017-02-21 07:57:09.345 INFO  (coreLoadExecutor-6-thread-1) [   x:travelsearch] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
+2017-02-21 07:57:09.685 INFO  (coreLoadExecutor-6-thread-1) [   x:travelsearch] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2017-02-21 07:57:09.685 INFO  (coreLoadExecutor-6-thread-1) [   x:travelsearch] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2017-02-21 07:57:09.700 INFO  (coreLoadExecutor-6-thread-1) [   x:travelsearch] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
+2017-02-21 07:57:09.700 INFO  (coreLoadExecutor-6-thread-1) [   x:travelsearch] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2017-02-21 07:57:09.946 INFO  (coreLoadExecutor-6-thread-1) [   x:travelsearch] o.a.s.s.SolrIndexSearcher Opening [Searcher@58e65846[travelsearch] main]
+2017-02-21 07:57:09.946 INFO  (coreLoadExecutor-6-thread-1) [   x:travelsearch] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /mnt/d/4043/cz4043_ir_solr/server/solr/travelsearch/conf
+2017-02-21 07:57:09.971 INFO  (coreLoadExecutor-6-thread-1) [   x:travelsearch] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2017-02-21 07:57:09.987 INFO  (coreLoadExecutor-6-thread-1) [   x:travelsearch] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2017-02-21 07:57:09.987 INFO  (coreLoadExecutor-6-thread-1) [   x:travelsearch] o.a.s.h.c.QueryElevationComponent Loading QueryElevation from: /mnt/d/4043/cz4043_ir_solr/server/solr/travelsearch/conf/elevate.xml
+2017-02-21 07:57:10.002 INFO  (coreLoadExecutor-6-thread-1) [   x:travelsearch] o.a.s.h.ReplicationHandler Commits will be reserved for  10000
+2017-02-21 07:57:10.021 INFO  (searcherExecutor-7-thread-1-processing-x:travelsearch) [   x:travelsearch] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@58e65846[travelsearch] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(6.4.1):C161/25:delGen=1) Uninverting(_1(6.4.1):C181) Uninverting(_2(6.4.1):C8)))}
+2017-02-21 07:57:10.021 INFO  (searcherExecutor-7-thread-1-processing-x:travelsearch) [   x:travelsearch] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2017-02-21 07:57:10.021 INFO  (searcherExecutor-7-thread-1-processing-x:travelsearch) [   x:travelsearch] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2017-02-21 07:57:10.021 INFO  (searcherExecutor-7-thread-1-processing-x:travelsearch) [   x:travelsearch] o.a.s.c.SolrCore [travelsearch] Registered new searcher Searcher@58e65846[travelsearch] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(6.4.1):C161/25:delGen=1) Uninverting(_1(6.4.1):C181) Uninverting(_2(6.4.1):C8)))}
+2017-02-21 07:57:10.047 INFO  (coreLoadExecutor-6-thread-1) [   x:travelsearch] o.a.s.c.SolrCore [travelsearch]  CLOSING SolrCore org.apache.solr.core.SolrCore@42472262
+2017-02-21 07:57:10.071 INFO  (coreLoadExecutor-6-thread-1) [   x:travelsearch] o.a.s.m.SolrMetricManager Closing metric reporters for: solr.core.travelsearch
+2017-02-21 07:57:10.071 ERROR (coreLoadExecutor-6-thread-1) [   x:travelsearch] o.a.s.c.CoreContainer Error creating core [travelsearch]: This CoreContainer has been closed
+java.lang.IllegalStateException: This CoreContainer has been closed
+	at org.apache.solr.core.CoreContainer.registerCore(CoreContainer.java:754)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:897)
+	at org.apache.solr.core.CoreContainer.lambda$load$3(CoreContainer.java:542)
+	at com.codahale.metrics.InstrumentedExecutorService$InstrumentedCallable.call(InstrumentedExecutorService.java:197)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.solr.common.util.ExecutorUtil$MDCAwareThreadPoolExecutor.lambda$execute$0(ExecutorUtil.java:229)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2017-02-21 07:57:10.071 ERROR (coreContainerWorkExecutor-2-thread-1) [   ] o.a.s.c.CoreContainer Error waiting for SolrCore to be created
+java.util.concurrent.ExecutionException: org.apache.solr.common.SolrException: Unable to create core [travelsearch]
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192)
+	at org.apache.solr.core.CoreContainer.lambda$load$4(CoreContainer.java:570)
+	at com.codahale.metrics.InstrumentedExecutorService$InstrumentedRunnable.run(InstrumentedExecutorService.java:176)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.solr.common.util.ExecutorUtil$MDCAwareThreadPoolExecutor.lambda$execute$0(ExecutorUtil.java:229)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.solr.common.SolrException: Unable to create core [travelsearch]
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:903)
+	at org.apache.solr.core.CoreContainer.lambda$load$3(CoreContainer.java:542)
+	at com.codahale.metrics.InstrumentedExecutorService$InstrumentedCallable.call(InstrumentedExecutorService.java:197)
+	... 5 more
+Caused by: java.lang.IllegalStateException: This CoreContainer has been closed
+	at org.apache.solr.core.CoreContainer.registerCore(CoreContainer.java:754)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:897)
+	... 7 more
+2017-02-21 07:57:10.071 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for: solr.node
