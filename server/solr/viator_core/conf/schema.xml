@@ -123,9 +123,19 @@
     <field name="_root_" type="string" indexed="true" stored="false" docValues="false" />
     <field name="_text_" type="text_general" indexed="true" stored="false" multiValued="true"/>
 
-    <!-- Only enabled in the "schemaless" data-driven example (assuming the client
-         does not know what fields may be searched) because it's very expensive to index everything twice. -->
-    <copyField source="*" dest="_text_"/>
+    
+
+    <!--user defined-->
+    <field name="message"   type="text_general" indexed="true" stored="true"/>
+    <field name="desc"   type="text_general" indexed="true" stored="true"/>
+    <field name="name"   type="text_general" indexed="true" stored="true"/>
+
+    <field name="page_id"  type="string"  indexed="true"  stored="true" />
+
+    <copyField source="message" dest="_text_"/>
+    <copyField source="name" dest="_text_"/>
+    <copyField source="desc" dest="_text_"/>
+
 
     <!-- Dynamic field definitions allow using convention over configuration
        for fields via the specification of patterns to match field names. 
@@ -363,7 +373,7 @@
       <analyzer type="query">
         <tokenizer class="solr.StandardTokenizerFactory"/>
         <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords.txt" />
-        <filter class="solr.SynonymFilterFactory" synonyms="synonyms.txt" ignoreCase="true" expand="true"/>
+        <filter class="solr.SynonymFilterFactory" synonyms="synonyms.txt" ignoreCase="true" expand="true" tokenizerFactory="solr.StandardTokenizerFactory" />
         <filter class="solr.LowerCaseFilterFactory"/>
         <filter class="solr.PorterStemFilterFactory" />
 
