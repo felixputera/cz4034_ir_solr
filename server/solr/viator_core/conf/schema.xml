@@ -125,13 +125,25 @@
 
     
 
-    <!--user defined-->
+    <!--indexed fields-->
     <field name="message"   type="text_general" indexed="true" stored="true"/>
     <field name="desc"   type="text_general" indexed="true" stored="true"/>
     <field name="name"   type="text_general" indexed="true" stored="true"/>
 
     <field name="page_id"  type="string"  indexed="true"  stored="true" />
+    <field name="type"  type="string"  indexed="true"  stored="true" />
 
+    <field name="likes_count"  type="int"    indexed="true"  stored="true"/>
+    <field name="shares_count"  type="int"    indexed="true"  stored="true"/>
+    <field name="reactions_count"  type="int"    indexed="true"  stored="true"/>
+    <field name="comments_count"  type="int"    indexed="true"  stored="true"/>
+
+    <field name="time"  type="date"    indexed="true"  stored="true"/>
+
+    <!--unindexed fields-->
+    <field name="link"  type="string"  indexed="false"  stored="true" />
+
+    <!--copy field for q search without specifying field-->
     <copyField source="message" dest="_text_"/>
     <copyField source="name" dest="_text_"/>
     <copyField source="desc" dest="_text_"/>
