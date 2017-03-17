@@ -142,6 +142,8 @@
 
     <!--unindexed fields-->
     <field name="link"  type="string"  indexed="false"  stored="true" />
+    <field name="picture"  type="string"  indexed="false"  stored="true" />
+
 
     <!--copy field for q search without specifying field-->
     <copyField source="message" dest="_text_"/>
