@@ -133,22 +133,34 @@
     <field name="page_id"  type="string"  indexed="true"  stored="true" />
     <field name="type"  type="string"  indexed="true"  stored="true" />
 
-    <field name="likes_count"  type="int"    indexed="true"  stored="true"/>
     <field name="shares_count"  type="int"    indexed="true"  stored="true"/>
     <field name="reactions_count"  type="int"    indexed="true"  stored="true"/>
     <field name="comments_count"  type="int"    indexed="true"  stored="true"/>
 
     <field name="time"  type="date"    indexed="true"  stored="true"/>
 
+    <field name="day"  type="string"    indexed="true"  stored="true"/>
+    <field name="month"  type="string"    indexed="true"  stored="true"/>
+    <field name="year"  type="string"    indexed="true"  stored="true"/>
+
+    <field name="is_weekend"  type="boolean"    indexed="true"  stored="true"/>
+
+
     <!--unindexed fields-->
     <field name="link"  type="string"  indexed="false"  stored="true" />
     <field name="picture"  type="string"  indexed="false"  stored="true" />
+    <field name="full_picture"  type="string"  indexed="false"  stored="true" />
 
 
     <!--copy field for q search without specifying field-->
     <copyField source="message" dest="_text_"/>
     <copyField source="name" dest="_text_"/>
     <copyField source="desc" dest="_text_"/>
+
+    <!--copy field for spell checking-->
+    <copyField source="message" dest="spell_check"/>
+    <copyField source="name" dest="spell_check"/>
+    <copyField source="desc" dest="spell_check"/>
 
 
     <!-- Dynamic field definitions allow using convention over configuration
