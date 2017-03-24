@@ -810,6 +810,10 @@
       <str name="wt">json</str>
       <str name="indent">true</str>
     </lst>
+    <arr name="last-components">
+      <str>spellcheck</str>
+    </arr>
+
   </requestHandler>
 
 
