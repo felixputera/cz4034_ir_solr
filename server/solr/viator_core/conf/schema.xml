@@ -157,12 +157,22 @@
     <copyField source="name" dest="_text_"/>
     <copyField source="desc" dest="_text_"/>
 
-    <!--copy field for spell checking-->
-    <copyField source="message" dest="spellcheck"/>
-    <copyField source="name" dest="spellcheck"/>
-    <copyField source="desc" dest="spellcheck"/>
+    <!--copy field for mlt-->
+    <field name="mlt_field" type="text_general" indexed="true" stored="false" multiValued="true" termVectors="true"/>
+    <copyField source="message" dest="mlt_field"/>
+    <copyField source="name" dest="mlt_field"/>
+    <copyField source="desc" dest="mlt_field"/>
 
-    <field name="spellcheck" type="text_general" indexed="false" stored="false"/>
+    <!--copy field for spell checking-->
+    <field name="spell_check" type="spellcheck_field" indexed="true" stored="false" multiValued="true"/>
+    <field name="messageU" type="spellcheck_field" indexed="true" stored="false"/>
+    <field name="nameU" type="spellcheck_field" indexed="true" stored="false"/>
+    <field name="descU" type="spellcheck_field" indexed="true" stored="false"/>
+
+    <copyField source="messageU" dest="spell_check"/>
+    <copyField source="nameU" dest="spell_check"/>
+    <copyField source="descU" dest="spell_check"/>
+
 
 
     <!-- Dynamic field definitions allow using convention over configuration
@@ -404,6 +414,21 @@
         <filter class="solr.SynonymFilterFactory" synonyms="synonyms.txt" ignoreCase="true" expand="true" tokenizerFactory="solr.StandardTokenizerFactory" />
         <filter class="solr.LowerCaseFilterFactory"/>
         <filter class="solr.PorterStemFilterFactory" />
+
+      </analyzer>
+    </fieldType>
+
+    <fieldType name="spellcheck_field" class="solr.TextField" positionIncrementGap="100" multiValued="true">
+      <analyzer type="index">
+        <tokenizer class="solr.StandardTokenizerFactory"/>
+        <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords.txt" />
+        <filter class="solr.LowerCaseFilterFactory"/>
+
+      </analyzer>
+      <analyzer type="query">
+        <tokenizer class="solr.StandardTokenizerFactory"/>
+        <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords.txt" />
+        <filter class="solr.LowerCaseFilterFactory"/>
 
       </analyzer>
     </fieldType>

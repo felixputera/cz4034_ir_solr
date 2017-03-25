@@ -809,6 +809,9 @@
       <str name="echoParams">explicit</str>
       <str name="wt">json</str>
       <str name="indent">true</str>
+      <str name="spellcheck">true</str>
+      <str name="hl">true</str>
+      <str name="hl.fl">message,name,desc</str>
     </lst>
     <arr name="last-components">
       <str>spellcheck</str>
@@ -918,9 +921,11 @@
       -->
 
     <!-- a spellchecker built from a field of the main index -->
+   
+
     <lst name="spellchecker">
       <str name="name">default</str>
-      <str name="field">_text_</str>
+      <str name="field">spell_check</str>
       <str name="classname">solr.DirectSolrSpellChecker</str>
       <!-- the spellcheck distance measure used, the default is the internal levenshtein -->
       <str name="distanceMeasure">internal</str>
@@ -940,6 +945,7 @@
         <float name="thresholdTokenFrequency">.01</float>
       -->
     </lst>
+    
 
     <!-- a spellchecker that can break or combine words.  See "/spell" handler below for usage -->
     <!--
@@ -953,6 +959,8 @@
     </lst>
     -->
   </searchComponent>
+
+
 
   <!-- A request handler for demonstrating the spellcheck component.  
 
