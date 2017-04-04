@@ -139,7 +139,7 @@
 
     <field name="comments_sentiment"  type="float"  indexed="true"  stored="true"/>
     <field name="comments_subjectivity"  type="float"  indexed="true"  stored="true"/>
-    <field name="subjectivity"  type="string"    indexed="true"  stored="true"/>
+    <field name="sentiment"  type="string"    indexed="true"  stored="true"/>
 
     <field name="time"  type="date"    indexed="true"  stored="true"/>
 
